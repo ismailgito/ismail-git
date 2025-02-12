@@ -1,0 +1,15 @@
+<button id="myButton">Click Me</button>
+
+<script>
+  const button = document.getElementById('myButton');
+
+  button.addEventListener('click', function () 
+  {
+    console.log('First handler: Button clicked!');
+  });
+
+  button.addEventListener('click', function () 
+  {
+    console.log('Second handler: Button clicked again!');
+  });
+</script>

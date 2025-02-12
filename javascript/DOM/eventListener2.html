@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<h1>
+    who is ismail ?
+</h1>
+<button id="answer">Click if you want answer</button>
+<p id="real">Answer:</p>
+<script>
+    //get elements bi ID'S
+    const answer=document.getElementById('answer');
+    const real=document.getElementById('real');
+    //add event listener
+    answer.addEventListener('click', function()
+{
+    real.innerHTML= "Answer: " + " ismail is a ceo of EtherWeb3.0"
+})
+</script>

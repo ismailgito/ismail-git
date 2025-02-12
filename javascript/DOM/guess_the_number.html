@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <input id="guessnumber" type="number">
+    <button onclick="checkGuess()">Click</button>
+    <h2 id="chances">Chances: 5</h2>
+    <p id="result">You are right/wrong</p>
+    <h1 id="score">Score: 0</h1>
+
+    <script>
+        var number = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        var score = 0; // Initialize score
+        var chances = 5; // Initialize chances
+
+        function checkGuess() {
+            var guess = parseInt(document.getElementById("guessnumber").value); // Get user's guess //          parseInt() converts a string to an integer
+            var result = document.getElementById("result");
+            var scoreElement = document.getElementById("score");
+            var chancesElement = document.getElementById("chances");
+
+            if (guess === number) 
+            {
+                result.innerHTML = "You are right!";
+                alert("Super! You found the number!");
+                score++; // Increment score
+                scoreElement.innerHTML = "Score: " + score; // Update score display
+                number = Math.floor(Math.random() * 10) + 1; // Generate a new random number
+                chances = 5; // Reset chances
+                chancesElement.innerHTML = "Chances: " + chances; // Update chances display
+            } 
+            else 
+            {
+                result.innerHTML = "You are wrong. Try again!";
+                alert("Try again!");
+                chances--; // Decrement chances
+                chancesElement.innerHTML = "Chances: " + chances; // Update chances display
+
+                if (chances === 0) 
+                {
+                    alert("Game over! The number was " + number);
+                    score = 0; // Reset score
+                    scoreElement.innerHTML = "Score: " + score; // Update score display
+                    number = Math.floor(Math.random() * 10) + 1; // Generate a new random number
+                    chances = 5; // Reset chances
+                    chancesElement.innerHTML = "Chances: " + chances; // Update chances display
+                }
+            }
+
+            document.getElementById("guessnumber").value = ""; // Clear the input field
+        }
+    </script>
+</body>
+</html>

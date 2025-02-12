@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .aaa{
+            color: red;
+        }
+        .bbb{
+            color: blue;
+        }
+    </style>
+    <title>DOM</title>
+    <body>
+        <center>
+            <div class="ast">
+        <h1 id="aasia" class="aaa"> who is ismail wife ?</h1>
+        <button id="ok" class="bbb" onclick="call()">Click Me</button>
+            </div>
+        </center>
+        <script>
+            //get the elements 
+            var aasia = document.getElementById("aasia");
+            var ok = document.getElementById("ok");
+            // add event listener 
+            ok.addEventListener('click', function ()          //anonymous function ------> addEventListener() function without name
+            {
+            aasia.innerHTML = "Aasia is ismail wife";
+            });
+        </script>
+    </body>
+</head>
+</html>

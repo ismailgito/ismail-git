@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>appendChild Example</title>
+</head>
+<body>
+  <div class="container"> <!-- Parent element -->
+    <p>Ismail</p> <!-- Existing element -->
+  </div>
+
+
+  <!--Javascript-->
+  <script>
+    // Step 1: Create a new paragraph element
+    const newParagraph = document.createElement('p'); //<-----selecting existing element
+
+    // Step 2: Add content to the new paragraph
+    newParagraph.textContent = 'aasia';
+
+    // Step 3: Select the parent element
+    const container = document.querySelector('.container');
+
+    // Step 4: Append the new paragraph to the container
+    container.appendChild(newParagraph);
+  </script>
+</body>
+</html>
