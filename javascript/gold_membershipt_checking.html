@@ -1,0 +1,32 @@
+<body>
+    <div>
+      <center>
+        <h1>etherWeb Gold Memberships</h1>
+        <p>Get the best of etherWeb with a gold membership</p>
+        <div id="main">
+          <input id="userId" placeholder="Enter your ID" type="number">
+        </div>
+        <button onclick="search()">Click</button>
+        <h3 id="mem"></h3>
+      </center>
+    </div>
+    <script>
+      const mem = document.getElementById('mem');
+      const userIdInput = document.getElementById('userId'); // Get the input element
+  
+      function search() {
+        const userId = parseInt(userIdInput.value); // Get the value and convert it to a number
+  
+        if (userId === 2250) { // Compare the value to 2250
+          mem.innerHTML = `
+            You are a gold member <br>
+            Name: Ismail <br>
+            Age: 25 <br>
+            Email: dadobeb553@gmail.com
+          `;
+        } else {
+          mem.innerHTML = "You are not a gold member";
+        }
+      }
+    </script>
+  </body>
