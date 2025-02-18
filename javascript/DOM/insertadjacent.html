@@ -1,0 +1,19 @@
+<div id="Box">
+    <p>hello ismail</p>
+</div>
+<script>
+    const newp=document.createElement('p');
+    const h1element=document.createElement('h1');
+    const d=document.createElement('h2');
+    h1element.textContent='Hello World';
+    newp.innerHTML="hi aasia is ismail wife"
+    d.innerHTML="Orewa Monkey D luffy"
+    //select div box
+    const box=document.querySelector('#Box');
+    //insert h1 element before the p element
+    box.insertAdjacentElement('afterend',h1element);
+    //insert h1 element after the p element
+    box.insertAdjacentElement('beforebegin',h1element);
+    box.insertAdjacentElement('afterend',newp); //<------ this is used to create a element in {div box}
+    box.insertAdjacentElement('afterend',d);
+</script>

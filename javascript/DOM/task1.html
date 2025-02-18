@@ -1,0 +1,13 @@
+<input id="input box">
+<h1 id="result"></h1>
+<button onclick="update()">Update</button>
+<script>
+    //select input tag
+    const inputBox=document.getElementById("input box");
+    //select h1 tag
+    const result=document.getElementById("result");
+    //function to update the h1 tag
+    function update(){
+        result.innerHTML=inputBox.value
+    }
+</script>

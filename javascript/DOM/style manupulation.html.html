@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    #box {
+            background-color: pink;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <button onclick="change()">Change colour</button>
+    </div>
+    <script>
+        //select box 1
+        const box = document.getElementById('box');
+        //function to change colour
+        function change(){
+            box.style.backgroundColor = 'red'; 
+            box.style.width = '200px';
+            box.style.height = '200px';
+            box.style.transition = 'all 2s';
+            box.style.borderRadius = '50%';
+        }
+    </script>
+    
+</body>
