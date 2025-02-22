@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+</head>
+<body>
+    <div>
+    <h4>score slab</h4>
+    <ul>0-30 low love score</ul>
+    <ul>31-70 medium love score</ul>
+    <ul>71-100 high love score</ul>
+    </div>
+    <input placeholder="What is your name" id="yourName">
+    <input placeholder="What is their name" id="theirName">
+    <h2 id="lovepoints"></h2>
+    <button onclick="fun()">Click</button>
+
+    <script>
+        const lovepointsElement = document.getElementById("lovepoints");
+
+        function fun() {
+            // Calculate love score
+            const lovepoints = Math.random() * 100;
+            const loveScore = Math.floor(lovepoints) + 1;
+
+            // Display the result in the DOM
+            lovepointsElement.innerHTML = `Your love score is ${loveScore}%`;
+
+            // Optional: Show an alert
+            alert(`Your love score is ${loveScore}%`);
+        }
+    </script>
+</body>
+</html>
