@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-white">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center py-4 px-8 bg-yellow-400">
+          <h1 class="text-xl font-bold">Mohamed Ismail</h1>
+          <ul class="flex space-x-8">
+            <li><a href="#" class="text-black font-semibold" id="about">About</a></li>
+            <li><a href="#" class="text-black font-semibold" id="Contact">Contact</a></li>
+            <li><a href="#" class="text-black font-semibold" id="socialMedia">Social media</a></li>
+            <li><a href="#" class="text-black font-semibold" id="moreProjects">More projects</a></li>
+          </ul>
+        </nav>
+      
+        <!-- QR Generator Section -->
+        <div class="flex flex-col items-center justify-center mt-16" id="qrGenerator">
+          <h2 class="text-3xl font-bold mb-8">QR generator</h2>
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              placeholder="https://www.example.com"
+              class="w-96 py-2 px-4 border-2 border-black rounded-full focus:outline-none"
+              id="qr_input"
+            />
+            <button id="gen_btn" class="py-2 px-6 bg-yellow-400 text-black font-semibold rounded-full border-2 border-black hover:bg-yellow-500">
+              Generate
+            </button>
+            
+          </div>
+        </div>
+        <br>
+        <div class="flex items-center justify-center mt-4 p-5 text-center text-9xl">
+          <div id="qr_image" type="image">
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="./qrCode.js"></script>
+</body>
+</html>
