@@ -1,0 +1,30 @@
+{
+  "name": "middleware",
+  "version": "1.0.0",
+  "description": "This is my first backend project",
+  "keywords": [
+    "mohamed",
+    "ismail"
+  ],
+  "homepage": "https://github.com/ismailgito/ismail-git#readme",
+  "bugs": {
+    "url": "https://github.com/ismailgito/ismail-git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailgito/ismail-git.git"
+  },
+  "license": "ISC",
+  "author": "mohamed ismail",
+  "type": "module",
+  "main": "middleware.js",
+  "scripts": {
+    "test": "run"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}
