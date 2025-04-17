@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Finder</title>
+    <link rel="stylesheet" href="css/axios_1.css">
+
+<body>
+    <div class="container">
+        <h1>Find Something to Do</h1>
+        
+        <!-- Filter form -->
+        <form action="/submit" method="POST" class="filter-form">
+            <select name="type" id="type">
+                <option value="">Any Type</option>
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+            </select>
+            
+            <select name="participants" id="participants">
+                <option value="">Any Number</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+            </select>
+            
+            <button type="submit">Filter Activities</button>
+            <button type="button" onclick="window.location.href='/'">Get Random Activity</button>
+        </form>
+
+        <!-- Display activities -->
+        <% if (Array.isArray(data)) { %>
+            <h2>Filtered Activities (<%= data.length %> found)</h2>
+            <% if (data.length === 0) { %>
+                <p>No activities found matching your criteria. Try different filters.</p>
+            <% } else { %>
+                <% data.forEach(activity => { %>
+                    <div class="activity-card">
+                        <h3><%= activity.activity %></h3>
+                        <p><strong>Type:</strong> <%= activity.type %></p>
+                        <p><strong>Participants:</strong> <%= activity.participants %></p>
+                        <p><strong>Price:</strong> <%= activity.price %></p>
+                        <p><strong>Accessibility:</strong> <%= activity.accessibility %></p>
+                    </div>
+                <% }); %>
+            <% } %>
+        <% } else { %>
+            <h2>Your Random Activity</h2>
+            <div class="activity-card">
+                <h3><%= data.activity %></h3>
+                <p><strong>Type:</strong> <%= data.type %></p>
+                <p><strong>Participants:</strong> <%= data.participants %></p>
+                <p><strong>Price:</strong> <%= data.price %></p>
+                <p><strong>Accessibility:</strong> <%= data.accessibility %></p>
+            </div>
+        <% } %>
+
+        <!-- Error display -->
+        <% if (typeof error !== 'undefined') { %>
+            <div class="error">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
